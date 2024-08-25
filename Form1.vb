@@ -51,7 +51,15 @@ Public Class Form1
                     MessageBox.Show(helpMessage, "Help", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Application.Exit()
                     Return
+                Case ""
+                    ' Display help message
+                    Dim helpMessage As String = "RosaryDetector should be launched directly instead of command line. " & vbCrLf &
+                        "Please type 'RosaryDetector --help' for more information."
+                    MessageBox.Show(helpMessage, "Help", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Application.Exit()
+                    Return
             End Select
+
         End If
 
         Select Case currentDayOfWeek
