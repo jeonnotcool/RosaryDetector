@@ -2,6 +2,7 @@
 Imports System.Windows.Forms
 
 Public Class Form1
+    ' Declare Variables
     Dim currentDayOfWeek As DayOfWeek = DateTime.Now.DayOfWeek
     Dim gloriousMysteriesLink As String = "https://www.youtube.com/watch?v=gmzvvtuajIk"
     Dim joyfulMysteriesLink As String = "https://www.youtube.com/watch?v=sSy77qPkgRE"
@@ -9,6 +10,7 @@ Public Class Form1
     Dim luminousMysteriesLink As String = "https://www.youtube.com/watch?v=yQgbJ_UVRDg"
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' If application is loaded, hide the form
         Me.Visible = False
         Dim myster As String = ""
 
@@ -80,8 +82,6 @@ Public Class Form1
             Case "Luminous Mysteries"
                 Process.Start(luminousMysteriesLink)
         End Select
-
-        ' Code to close the browser here
 
         ' Send notification to Windows Notification Center
         Dim notification As New NotifyIcon()

@@ -24,6 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DTW = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -45,12 +46,22 @@ Partial Class Form1
         Me.DTW.Text = "This should not appear when launching the application. Instead, it should launch " &
     "the website and notification."
         '
+        'Label2
+        '
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!)
+        Me.Label2.Location = New System.Drawing.Point(15, 342)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(295, 63)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "If you can see this then there is something wrong with the code."
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(583, 500)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.DTW)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -64,4 +75,5 @@ Partial Class Form1
 
     Friend WithEvents Label1 As Label
     Friend WithEvents DTW As Label
+    Friend WithEvents Label2 As Label
 End Class
